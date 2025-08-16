@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM python:3.11.13-alpine@sha256:9ce54d7ed458f71129c977478dd106cf6165a49b73fa38c217cc54de8f3e2bd0 AS builder
+FROM python:3.13.7-alpine@sha256:587df003ff48316a56a0ddac50e1e2b64dfeca281f0c071b91920895a65b12d2 AS builder
 
 # Set working directory
 WORKDIR /app
@@ -11,7 +11,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Use a smaller base image for the final image
-FROM python:3.11.13-alpine@sha256:9ce54d7ed458f71129c977478dd106cf6165a49b73fa38c217cc54de8f3e2bd0
+FROM python:3.13.7-alpine@sha256:587df003ff48316a56a0ddac50e1e2b64dfeca281f0c071b91920895a65b12d2
 
 # Set working directory
 WORKDIR /app
