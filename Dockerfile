@@ -17,7 +17,7 @@ FROM python:3.14.3-alpine@sha256:faee120f7885a06fcc9677922331391fa690d911c020abb
 WORKDIR /app
 
 # Copy the dependencies from the builder stage
-COPY --from=builder /usr/local/lib/python3.11/site-packages /usr/local/lib/python3.11/site-packages
+COPY --from=builder /usr/local/lib/python3.14/site-packages /usr/local/lib/python3.14/site-packages
 COPY --from=builder /usr/local/bin /usr/local/bin
 
 # Copy the application files
