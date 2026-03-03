@@ -6,7 +6,7 @@ from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_excep
 from github import GitHubClient
 
 GITHUB_API_URL = "https://api.github.com"
-GETOUTLINE_API_URL = "https://app.getoutline.com"
+GETOUTLINE_API_URL = "https://glueops.getoutline.com"
 
 # Environment Variables
 REQUIRED_ENV_VARS = [
